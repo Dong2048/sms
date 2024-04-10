@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zagt.mapper.VideosMapper">
+
+    <resultMap id="BaseResultMap" type="com.zagt.entity.Videos">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="cameraId" column="camera_id" jdbcType="INTEGER"/>
+            <result property="videoPath" column="video_path" jdbcType="VARCHAR"/>
+            <result property="startTime" column="start_time" jdbcType="TIMESTAMP"/>
+            <result property="endTime" column="end_time" jdbcType="TIMESTAMP"/>
+            <result property="status" column="status" jdbcType="TINYINT"/>
+            <result property="createdAt" column="created_at" jdbcType="TIMESTAMP"/>
+            <result property="updatedAt" column="updated_at" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,camera_id,video_path,
+        start_time,end_time,status,
+        created_at,updated_at
+    </sql>
+</mapper>
